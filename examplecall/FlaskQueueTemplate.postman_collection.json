@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "c5c2aafd-cac5-4bc1-966d-9b838317c7ab",
+		"name": "FlaskCeleryTemplate",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18860166"
+	},
+	"item": [
+		{
+			"name": "Sending n for fibonacci calculation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"n\": 32}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/fibocalc",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"fibocalc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check Task Status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/checktaskid/fecb7a07-3952-49cd-ab9c-cf7cd1c9b951",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"checktaskid",
+						"fecb7a07-3952-49cd-ab9c-cf7cd1c9b951"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Calling fibonacci calculation for random number between 13 and 44",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"n\": 40}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/randomfibocalc",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"randomfibocalc"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "task_id",
+			"value": "a5f14de6-0c3b-4cac-9fac-b874f17b4d6e"
+		}
+	]
+}
